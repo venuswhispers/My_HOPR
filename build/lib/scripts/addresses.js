@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.HOPR_MINTER = exports.HOPR_CHANNELS = exports.HOPR_TOKEN = void 0;
+exports.HOPR_FAUCET = exports.HOPR_MINTER = exports.HOPR_CHANNELS = exports.HOPR_TOKEN = void 0;
 exports.HOPR_TOKEN = {
     mainnet: undefined,
     morden: undefined,
@@ -27,4 +27,13 @@ exports.HOPR_MINTER = {
     goerli: undefined,
     kovan: undefined,
     private: '0x0a67180CF519aDF27f1FD32F7255bBa00B536FC6',
+};
+exports.HOPR_FAUCET = {
+    mainnet: undefined,
+    morden: undefined,
+    ropsten: undefined,
+    rinkeby: undefined,
+    goerli: undefined,
+    kovan: undefined,
+    private: '0x6c97048D67c39ADCe38bbB228fc1bA415fc8f096',
 };

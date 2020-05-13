@@ -29,3 +29,13 @@ export const HOPR_MINTER: { [key in Networks]: string } = {
   kovan: undefined,
   private: '0x0a67180CF519aDF27f1FD32F7255bBa00B536FC6',
 }
+
+export const HOPR_FAUCET: { [key in Networks]: string } = {
+  mainnet: undefined,
+  morden: undefined,
+  ropsten: undefined,
+  rinkeby: undefined,
+  goerli: undefined,
+  kovan: undefined,
+  private: '0x6c97048D67c39ADCe38bbB228fc1bA415fc8f096',
+}

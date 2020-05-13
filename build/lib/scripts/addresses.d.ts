@@ -8,3 +8,6 @@ export declare const HOPR_CHANNELS: {
 export declare const HOPR_MINTER: {
     [key in Networks]: string;
 };
+export declare const HOPR_FAUCET: {
+    [key in Networks]: string;
+};
