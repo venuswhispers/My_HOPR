@@ -1,5 +1,6 @@
 import Head from 'next/head'
-import Input from '../components/Input'
+import Faucet from '../components/Faucet'
+import { colors, NETWORK } from '../utils'
 
 export default function Home() {
   return (
@@ -17,11 +18,16 @@ export default function Home() {
         <p className="description">This faucet will mint 100 HOPR tokens to your address.</p>
 
         <div>
-          <Input />
+          <Faucet network={NETWORK} />
         </div>
       </main>
 
       <footer>
+        <a href={`http://${NETWORK}.etherscan.io/`} target="_blank" rel="noopener noreferrer">
+          {NETWORK}&nbsp;
+          <span className="dot" style={{ backgroundColor: colors[NETWORK] }} />
+        </a>
+
         <a href="https://github.com/hoprnet" target="_blank" rel="noopener noreferrer">
           hoprnet <img src="/github-32x.png" alt="Github Logo" className="logo" />
         </a>
@@ -48,10 +54,11 @@ export default function Home() {
 
         footer {
           width: 100%;
+          margin: 0 2em;
           height: 75px;
           border-top: 1px solid #eaeaea;
           display: flex;
-          justify-content: center;
+          justify-content: space-between;
           align-items: center;
         }
 
@@ -61,8 +68,17 @@ export default function Home() {
 
         footer a {
           display: flex;
-          justify-content: center;
           align-items: center;
+        }
+
+        footer a:first-of-type {
+          flex: 1;
+          align-items: left;
+        }
+
+        footer::after {
+          flex: 1;
+          content: '';
         }
 
         a {
@@ -97,16 +113,16 @@ export default function Home() {
           font-size: 1.5rem;
         }
 
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: 'Courier New', Courier, monospace;
-        }
-
         .logo {
           height: 1em;
+        }
+
+        .dot {
+          height: 10px;
+          width: 10px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
         }
       `}</style>
 

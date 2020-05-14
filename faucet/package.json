@@ -8,9 +8,13 @@
     "start": "next start"
   },
   "dependencies": {
+    "@hoprnet/hopr-ethereum": "file:../",
     "next": "9.4.0",
+    "next-transpile-modules": "^3.3.0",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "web3": "^1.2.7",
+    "web3-utils": "^1.2.7"
   },
   "devDependencies": {
     "@types/react": "^16.9.35"
