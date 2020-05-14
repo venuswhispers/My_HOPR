@@ -20,6 +20,7 @@ export default async (req: IncomingMessage, res: ServerResponse) => {
     if (typeof addresses[network] === 'undefined') {
       res.statusCode = 400
       res.end('Invalid network.')
+      return
     }
 
     // validate address
@@ -27,6 +28,7 @@ export default async (req: IncomingMessage, res: ServerResponse) => {
     if (!isAddress(address)) {
       res.statusCode = 400
       res.end('Invalid address.')
+      return
     }
     // checksum address
     address = toChecksumAddress(address)
