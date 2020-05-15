@@ -6,5 +6,3 @@ export const colors: {
   kovan: 'purple',
   private: 'grey',
 }
-
-export type { Networks }

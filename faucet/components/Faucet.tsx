@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { isAddress } from 'web3-utils'
-import { Networks } from '../utils'
+import type { Networks } from '@hoprnet/hopr-ethereum/scripts/addresses'
 
 async function mint(
   network: Networks,
