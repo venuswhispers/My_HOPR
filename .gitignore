@@ -28,4 +28,4 @@ allFiredEvents
 scTopics
 
 # Exclude truffle-config secrets
-truffle-secrets.json
+.env
