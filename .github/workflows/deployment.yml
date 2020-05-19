@@ -6,8 +6,8 @@ on:
       - feature/faucet
 
 jobs:
-  setting_up_2:
-    name: Setting project
+  deploy_kovan:
+    name: Deploy Contracts to Kovan
     runs-on: ubuntu-latest
     steps:
       # Checkout, Cache and Setup Steps
@@ -35,16 +35,9 @@ jobs:
       - name: Compile contracts
         if: steps.cache-contracts.outputs.cache-hit != 'true'
         run: yarn build
-
-  deploy_kovan:
-    name: Deploy Contracts to Kovan
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
+      # Deploy contracts
       - name: Deploy to Kovan
+        if: steps.cache-contracts.outputs.cache-hit != 'true'
         env:
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
         run: yarn migrate kovan
