@@ -39,4 +39,6 @@ jobs:
       - name: Deploy to Kovan
         env:
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          INFURA: ${{ secrets.INFURA }}
+          ETHERSCAN: ${{ secrets.ETHERSCAN }}
         run: yarn migrate kovan
