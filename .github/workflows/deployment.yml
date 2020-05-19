@@ -37,7 +37,6 @@ jobs:
         run: yarn build
       # Deploy contracts
       - name: Deploy to Kovan
-        if: steps.cache-contracts.outputs.cache-hit != 'true'
         env:
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
         run: yarn migrate kovan
