@@ -1,6 +1,6 @@
 {
   "name": "@hoprnet/hopr-ethereum",
-  "version": "v0.3.0-dev.16bebd9",
+  "version": "0.3.1-dev.f3f50b1",
   "description": "On-chain logic for hopr.network",
   "homepage": "https://hopr.network",
   "repository": {
