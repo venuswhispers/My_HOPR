@@ -29,7 +29,7 @@
     "network": "ts-node -T ./scripts/cli.ts network",
     "test": "ts-node -T ./scripts/cli.ts test",
     "format": "prettier --check .",
-    "prepare": "yarn build"
+    "prepublish": "yarn build"
   },
   "husky": {
     "hooks": {

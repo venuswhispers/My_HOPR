@@ -9,7 +9,7 @@ yarn-error.log
 .vscode/
 
 # Exclude solidity builds
-build/contracts/
+build/
 
 # Exclude typechain builds
 types/truffle-contracts/

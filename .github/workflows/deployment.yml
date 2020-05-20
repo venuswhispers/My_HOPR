@@ -3,7 +3,7 @@ name: Deployment
 on:
   push:
     branches:
-      - feature/faucet
+      - release/*
 
 jobs:
   deploy_kovan:
