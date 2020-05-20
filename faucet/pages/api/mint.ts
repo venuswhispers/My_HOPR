@@ -6,7 +6,7 @@ import HoprFaucetAbi from '@hoprnet/hopr-ethereum/build/extracted/abis/HoprFauce
 import Web3 from 'web3'
 
 const { isAddress, toChecksumAddress, toWei } = Web3.utils
-const { PRIVATE_KEY, INFURA_API_KEY } = process.env
+const { PRIVATE_KEY, INFURA } = process.env
 
 export default async (req: IncomingMessage, res: ServerResponse) => {
   try {
@@ -38,7 +38,7 @@ export default async (req: IncomingMessage, res: ServerResponse) => {
     // infura url
     const url = isPrivate
       ? `ws://${networksConfig.development.host}:${networksConfig.development.port}`
-      : `https://${network}.infura.io/v3/${INFURA_API_KEY}`
+      : `https://${network}.infura.io/v3/${INFURA}`
 
     // initialize web3
     const web3 = new Web3(url)
@@ -55,7 +55,8 @@ export default async (req: IncomingMessage, res: ServerResponse) => {
       PRIVATE_KEY
     )
 
-    await web3.eth.sendSignedTransaction(signedTransaction.rawTransaction)
+    // we don't need to wait for the receipt
+    web3.eth.sendSignedTransaction(signedTransaction.rawTransaction)
 
     res.statusCode = 200
     res.setHeader('Content-Type', 'application/json')
