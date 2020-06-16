@@ -1,6 +1,6 @@
 {
   "name": "@hoprnet/hopr-ethereum",
-  "version": "0.3.4-dev.1848af4",
+  "version": "0.3.5-refactor.421bb0f",
   "description": "On-chain logic for hopr.network",
   "homepage": "https://hoprnet.io",
   "repository": {
@@ -55,8 +55,8 @@
     "@types/mocha": "^7.0.2",
     "@types/node": "^13.13.4",
     "chai": "^4.2.0",
-    "husky": "^4.2.5",
     "ganache-core": "^2.10.2",
+    "husky": "^4.2.5",
     "mocha": "^7.1.2",
     "prettier": "^2.0.5",
     "prettier-plugin-solidity": "^1.0.0-alpha.49",
