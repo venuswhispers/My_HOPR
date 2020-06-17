@@ -23,12 +23,20 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@hoprnet/hopr-demo-seeds@1.0.3-refactor.3ad82ff":
+"@hoprnet/hopr-demo-seeds@1.0.3-refactor.3ad82ff", "@hoprnet/hopr-demo-seeds@^1.0.3-refactor.3ad82ff":
   version "1.0.3-refactor.3ad82ff"
   resolved "https://registry.yarnpkg.com/@hoprnet/hopr-demo-seeds/-/hopr-demo-seeds-1.0.3-refactor.3ad82ff.tgz#f292908a36bfb5937a328a911d05282e33cba0ba"
   integrity sha512-cij4CETUq/P6Y0wBYoHM3hjhY/Ysz3iyg7vCpnpdYq2guoscz8pzuQ7ZzUTvlTda7snDDdlOEucTwMFj0WzM9A==
   dependencies:
     micro "^9.3.4"
+
+"@hoprnet/hopr-testing@0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@hoprnet/hopr-testing/-/hopr-testing-0.1.2.tgz#f33b549090c40e02d54a81888a086811c4787cb0"
+  integrity sha512-Le7IyyPT2E1Rex7QHNA6djwHTGWBtwiakJMiYE5K8CMYtRz+WHspy2Ld2fwfkDo/4mNRe5zgvq0rt4KOY3KKOQ==
+  dependencies:
+    "@hoprnet/hopr-demo-seeds" "^1.0.3-refactor.3ad82ff"
+    ganache-core "^2.10.2"
 
 "@hoprnet/hopr-utils@0.1.6-refactor.61df948":
   version "0.1.6-refactor.61df948"
