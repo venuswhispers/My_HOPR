@@ -30,10 +30,10 @@
   dependencies:
     micro "^9.3.4"
 
-"@hoprnet/hopr-utils@0.1.5-refactor.41eaa0d":
-  version "0.1.5-refactor.31c0354"
-  resolved "https://registry.yarnpkg.com/@hoprnet/hopr-utils/-/hopr-utils-0.1.5-refactor.31c0354.tgz#396da9445b4de81805775471ebae83c111378ccc"
-  integrity sha512-7ljkzm4jZ9jmBdT/gDR0L3+0uUVEx4G/6yDF6Y+e8Ez5UHML7XxPNkEDe6PJYwT3Icit9aDrP5x0EDtX65C6xg==
+"@hoprnet/hopr-utils@0.1.6-refactor.61df948":
+  version "0.1.6-refactor.61df948"
+  resolved "https://registry.yarnpkg.com/@hoprnet/hopr-utils/-/hopr-utils-0.1.6-refactor.61df948.tgz#9e1897c08894f2267458045b1f40057af4a708d8"
+  integrity sha512-gvN1k3xb9tF5NZp+tMwKU6gS6QqlCKyqIJ4r9AkHtBpgD8Wa/vhDAVyGjH3HDwiBXOPDhfhtkNZNJ1WJnBHoFQ==
   dependencies:
     bignumber.js "^9.0.0"
     chalk "^4.1.0"

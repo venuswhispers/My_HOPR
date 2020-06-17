@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "@hoprnet/hopr-demo-seeds": "1.0.3-refactor.3ad82ff",
-    "@hoprnet/hopr-utils": "0.1.5-refactor.41eaa0d",
+    "@hoprnet/hopr-utils": "0.1.6-refactor.61df948",
     "@openzeppelin/contracts": "^3.0.1",
     "@openzeppelin/test-helpers": "^0.5.5",
     "@truffle/debug-utils": "^4.1.1",
