@@ -18,8 +18,8 @@
     "migrations/"
   ],
   "engines": {
-    "yarn": "^1.19.2",
-    "node": "^12"
+    "yarn": "1.19.2",
+    "node": "12.9.1"
   },
   "scripts": {
     "build": "ts-node -T ./scripts/cli.ts build",
@@ -45,7 +45,6 @@
     "@truffle/hdwallet-provider": "^1.0.34",
     "bignumber.js": "^9.0.0",
     "dotenv": "^8.2.0",
-    "ganache-core": "^2.10.2",
     "truffle": "^5.1.23",
     "truffle-plugin-verify": "^0.3.10",
     "ts-node": "^8.9.1",
@@ -60,6 +59,7 @@
     "mocha": "^7.1.2",
     "prettier": "^2.0.5",
     "prettier-plugin-solidity": "^1.0.0-alpha.49",
+    "ganache-core": "^2.10.2",
     "solhint": "^2.3.1",
     "solidity-coverage": "^0.7.4",
     "truffle-typings": "^1.0.8",
