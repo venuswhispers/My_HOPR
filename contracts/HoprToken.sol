@@ -11,7 +11,6 @@ contract HoprToken is AccessControl, ERC777Snapshot {
 
     constructor() public ERC777("HOPR Token", "HOPR", new address[](0)) {
         _setupRole(DEFAULT_ADMIN_ROLE, msg.sender);
-        _setupRole(MINTER_ROLE, msg.sender);
     }
 
     /**

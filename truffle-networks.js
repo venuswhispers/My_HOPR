@@ -2,11 +2,11 @@
  * @typedef {Object} Network
  * @property {string} network_id
  * @property {'development' | 'testnet' | 'mainnet'} network_type
- * @property {boolean=} noVerify
  * @property {string=} host
  * @property {number=} port
  * @property {number=} gas
  * @property {number=} gasPrice
+ * @property {boolean=} noVerify
  */
 
 /** @type {Object.<string, Network>} */

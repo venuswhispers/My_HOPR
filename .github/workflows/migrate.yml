@@ -1,13 +1,12 @@
-name: Deployment
-
+name: Migrate
 on:
   push:
-    branches:
-      - release/*
+    tags: '*'
+    branches-ignore: '*'
 
 jobs:
-  deploy_kovan:
-    name: Deploy Contracts to Kovan
+  migrate:
+    name: Migrate Contracts
     runs-on: ubuntu-latest
     steps:
       # Checkout, Cache and Setup Steps
@@ -39,12 +38,17 @@ jobs:
         run: |
           yarn policies set-version 1.19.2
           yarn build
-      # Deploy contracts
-      - name: Deploy to Kovan
-        env:
-          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-          INFURA: ${{ secrets.INFURA }}
-          ETHERSCAN: ${{ secrets.ETHERSCAN }}
-        run: |
-          yarn policies set-version 1.19.2
-          yarn migrate kovan
+      - name: Get tag
+        run: echo ::set-env name=TAG::${GITHUB_REF#refs/*/}
+      - name:
+        run: echo $TAG
+      # Migrate contracts
+      # - name: Migrate to Kovan
+      #   env:
+      #     PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+      #     INFURA: ${{ secrets.INFURA }}
+      #     ETHERSCAN: ${{ secrets.ETHERSCAN }}
+      #   run: |
+      #     yarn policies set-version 1.19.2
+      #     yarn migrate kovan
+# node -p -e "Object.keys(require('./truffle-networks')).includes('xdai')"
