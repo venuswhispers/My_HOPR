@@ -39,7 +39,7 @@ jobs:
           yarn policies set-version 1.19.2
           yarn build
       - name: Get version
-        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
+        run: echo ::set-env name=VERSION::${GITHUB_REF/refs\/tags\//}
       - name:
         run: echo $VERSION
       # Migrate contracts
