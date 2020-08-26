@@ -38,10 +38,10 @@ jobs:
         run: |
           yarn policies set-version 1.19.2
           yarn build
-      - name: Get tag
-        run: echo ::set-env name=TAG::${GITHUB_REF#refs/*/}
+      - name: Get version
+        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
       - name:
-        run: echo $TAG
+        run: echo $VERSION
       # Migrate contracts
       # - name: Migrate to Kovan
       #   env:
