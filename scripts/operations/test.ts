@@ -7,7 +7,12 @@ export default async (...args: any[]) => {
     port: networks.test.port,
   })
 
+  let command = 'npx truffle test --network test'
+  if (args.length > 0) {
+    command += ` ${args.join(' ')}`
+  }
+
   await ganache.start()
-  await bash(`npx truffle test --network test`)
+  await bash(command)
   await ganache.stop()
 }
