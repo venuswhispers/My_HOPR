@@ -2,8 +2,8 @@ name: HOPR Workflow
 on:
   push:
     branches: '*'
-  pull_request:
-    types: [closed]
+  # pull_request:
+  #   types: [closed]
 
 jobs:
   build:
