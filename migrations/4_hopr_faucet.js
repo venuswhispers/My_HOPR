@@ -10,15 +10,18 @@ module.exports = async (deployer, _network, [owner]) => {
   const singleFaucetUser = ['xdai'].includes(network)
   const hoprToken = await HoprToken.deployed()
 
+  let hoprFaucet
+  let pauserRole
+  let minterRole
+
   // deploy HoprFaucet only on development networks & testnet networks
   if (config.network_type === 'development' || config.network_type === 'testnet') {
     await deployer.deploy(HoprFaucet, hoprToken.address, singleFaucetUser)
-  }
 
-  const hoprFaucet = await HoprFaucet.deployed()
-  // const adminRole = await hoprFaucet.DEFAULT_ADMIN_ROLE()
-  const pauserRole = await hoprFaucet.PAUSER_ROLE()
-  const minterRole = await hoprFaucet.MINTER_ROLE()
+    hoprFaucet = await HoprFaucet.deployed()
+    pauserRole = await hoprFaucet.PAUSER_ROLE()
+    minterRole = await hoprFaucet.MINTER_ROLE()
+  }
 
   // give contract HoprFaucet MINTER_ROLE
   if (config.network_type === 'development') {

@@ -10,14 +10,18 @@ module.exports = async (deployer, _network, [owner]) => {
   const maxAmount = web3.utils.toWei('100000000', 'ether')
   const duration = Math.floor(durations.days(365) / 1e3)
 
+  let hoprMinter
+  let adminRole
+  let minterRole
+
   // deploy HoprMinter only on development networks & mainnet network
   if (config.network_type === 'development' || config.network_type === 'mainnet') {
     await deployer.deploy(HoprMinter, hoprToken.address, maxAmount, duration)
-  }
 
-  const hoprMinter = await HoprMinter.deployed()
-  const adminRole = await hoprToken.DEFAULT_ADMIN_ROLE()
-  const minterRole = await hoprToken.MINTER_ROLE()
+    hoprMinter = await HoprMinter.deployed()
+    adminRole = await hoprToken.DEFAULT_ADMIN_ROLE()
+    minterRole = await hoprToken.MINTER_ROLE()
+  }
 
   // renounce all roles and give minter role to contract HoprMinter
   if (config.network_type === 'mainnet') {
